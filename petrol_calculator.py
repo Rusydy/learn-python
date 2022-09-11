@@ -32,10 +32,7 @@ def identitas_pembeli(nama,nomor_hape,pekerjaan):
 biodata_pembeli = data_pembeli
 print(biodata_pembeli)
 
-#Diketahui terdapat jenis bahan bakar yang dapat diisi (pertalait, pertameks, dan selar)
-def jenis_bbm(bbm):
-    for x, in bbm:
-        print(x),
+# Diketahui terdapat jenis bahan bakar yang dapat diisi (pertalait, pertameks, dan selar)
 
 #masukkan data bbm
 tipe_bbm =[]
@@ -65,6 +62,7 @@ total_belanja = hitung_biaya_bbm()
 print (total_belanja, "a")
 
 # print dengan contoh output yudi telah membeli tipe bbm selar seharga  12000 dengan total belanja 360000 rupiah
+# pertamax 
 print ()
 
 #lakukan pembelajaan jika pembeli memiliki uang senilai tertentu lalu hitunglah sampai habis uangnya untuk dibelanjakan
