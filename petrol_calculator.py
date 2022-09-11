@@ -42,6 +42,19 @@ pertalait = 10000
 pertameks = 12000
 selar = 5000
 
+# merek mobil
+# masukkan jumlah liter
+# masukkan jenis bbm
+# total belajaan
+  # jenis mobil dari merek
+  # jenis bbm
+  # toyota 2 liter
+  # pertalite 1 liter = 10000
+  # total belanja = 20000
+
+
+
+
 # buatlah sebuah  fungsi yang mengidentifikasi jenis mobil pemberli dan jumlah liter kebutuhan
 # need more information
 def jenis_mobil (nama_brand,jumlah_liter):

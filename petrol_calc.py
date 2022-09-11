@@ -1,16 +1,17 @@
-#PETROL CALCULATOR
+# PETROL CALCULATOR
 
-def pengenalan_function() :
-    print ("Selamat datang di SPBU UPNVJ FT")
+def pengenalan_function():
+    print("Selamat datang di SPBU UPNVJ FT")
 
-#memanggil fungsi untuk dapat  dijalankan
+# memanggil fungsi untuk dapat  dijalankan
 pengenalan_function()
 
-# object data pembeli yang meliputi (nama,nomerHape, pekerjaan) 
+# object data pembeli yang meliputi (nama,nomerHape, pekerjaan)
 data_pembeli = []
 
 # input data nama pembeli yang meliputi (nama,nomerHape, pekerjaan) dari terminal
-def identitas_pembeli(nama,nomor_hape,pekerjaan):
+
+def identitas_pembeli(nama, nomor_hape, pekerjaan):
     print("Nama Pembeli: ", nama)
     data_pembeli.append(nama)
     print("Nomor Hape: ", nomor_hape)
@@ -21,46 +22,35 @@ def identitas_pembeli(nama,nomor_hape,pekerjaan):
 
 # get input from terminal
 nama = input("Masukkan nama pembeli: ")
+data_pembeli.append(nama)
 nomor_hape = input("Masukkan nomor hape pembeli: ")
+data_pembeli.append(nomor_hape)
 pekerjaan = input("Masukkan pekerjaan pembeli: ")
-
-# call function identitas_pembeli
-biodata_pembeli = identitas_pembeli(nama,nomor_hape,pekerjaan)
-
-# there are only three types of fuel that can be filled (pertalite, pertamax, and solar)
-# pertalite = 10000, pertamax = 12000, solar = 5000
+data_pembeli.append(pekerjaan)
 
 fuels_type_price = {"pertalite": 10000, "pertamax": 12000, "solar": 5000}
 
-# buatlah sebuah  fungsi yang mengidentifikasi jenis mobil pemberli dan jumlah liter kebutuhan
-# create a function that identifies the type of car and the amount of fuel needed
-car_liter = {"toyota": 10, "honda": 12, "suzuki": 5}
+car_type_liter = {"toyota": 10, "honda": 12, "suzuki": 5}
 
-def jenis_mobil (nama_brand,jumlah_liter):
-    print("Nama Brand Mobil: ", nama_brand)
-    print("Jumlah Liter: ", jumlah_liter)
-    return ()
 
-def hitung_biaya_bbm(liter, harga):
-    total = liter * harga
-    return total
+def hitung_biaya_bbm (jumlah_liter, jenis_bbm):
+    fuel_price = fuels_type_price[jenis_bbm]
+    total_belanja = jumlah_liter * fuel_price
+    print("Total Belanja: ", total_belanja)
+    return total_belanja
 
-liter = int(input("Masukkan jumlah liter: "))
-harga = int(input("Masukkan harga: "))
-total_belanja = hitung_biaya_bbm(liter, harga)
+# get input from terminal
+jumlah_liter = int(input("Masukkan jumlah liter: "))
+jenis_bbm = input("Masukkan jenis bbm: ")
 
-print(total_belanja)
+# print jenis 
+# call function total_belanja
+total_belanja = hitung_biaya_bbm(jumlah_liter, jenis_bbm)
 
-# print dengan contoh output yudi telah membeli tipe bbm selar seharga  12000 dengan total belanja 360000 rupiah
-# pertamax
-print()
-
-# lakukan pembelajaan jika pembeli memiliki uang senilai tertentu lalu hitunglah sampai habis uangnya untuk dibelanjakan
-# gunakan recursion
-
+print(data_pembeli[0], "telah membeli tipe bbm", jenis_bbm, "seharga", fuels_type_price[jenis_bbm], "dengan total belanja", total_belanja, "rupiah")
 
 def belanja(uang):
-    if (uang >= total_belanja):
+    if uang >= total_belanja:
         sisa_uang = uang - total_belanja
         belanja(sisa_uang)
         print(sisa_uang)
